@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styleQ3.css">
+    </head>
+<body>
+    <div id="container">
+        <div>
+            <h1 style="margin-top:0px;">Q3. Guess The Word</h1>
+        </div>
+        <div id="timer"></div>
+        </div>
+    <div class="game">
+        <div id="nh">
+        <img class="image" src="./Assets/SkillMirrorImage.png" width="355.1px">
+        <div class="choices">
+            <button class="choice" id="choice1" onclick="selectOption(this, true)">Skill</button>
+            <button class="choice" id="choice2" onclick="selectOption(this, false)">Silk</button>
+        </div>
+        </div>
+    </div>
+    
+    <!-- <button class="submit" type="button">Submit</button> -->
+    <button id="submitButton" class="submit" type="button" onclick="submitAnswer()">Submit</button>
+    <script src="Q3.js" defer></script>
+    <script>
+        function updateTimer() {
+            const quizEndTime = localStorage.getItem('quizEndTime');
+            const remainingTime = quizEndTime - Date.now();
+
+            if (remainingTime <= 0) {
+                // Timer ran out
+                localStorage.removeItem('quizEndTime'); // Clean up
+                window.location.href = "endPage.html"; // Redirect to result
+            } else {
+                const minutes = Math.floor(remainingTime / 60000);
+                const seconds = Math.floor((remainingTime % 60000) / 1000);
+                document.getElementById("timer").textContent = 
+                    `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+            }
+        }
+        updateTimer();
+        setInterval(updateTimer, 1000); // Update every second
+    </script>
+</body>
+</html>

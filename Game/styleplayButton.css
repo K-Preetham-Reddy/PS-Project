@@ -1,0 +1,54 @@
+body {
+    background-image: url("./Assets/playBackground.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.playButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.playButton .images{
+    display: flexbox;
+    float: left;
+}
+.playBtn {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #00BF63;
+    border: 3px solid black;
+    border-radius: 12px;
+    width: 200px;
+    height: 90px;
+    font-size: 50px;
+    color: black;
+    cursor: pointer;
+    margin-bottom: 200px;
+}
+
+.playBtn:hover{
+    background-color: #01ae5a;
+    cursor: pointer;
+}
+.threeLines:hover{
+    border: 2px solid black;
+    cursor: pointer;
+}
+.gameIcon:hover{
+    border: 2px solid black;
+    cursor: pointer;;
+}
+.analysisIcon:hover{
+    border: 2px solid black;
+    cursor: pointer;
+}
+#image{
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.images{
+    display: flex;
+    flex-direction: column;
+}

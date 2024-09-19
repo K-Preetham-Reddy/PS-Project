@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="styleplayButton.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div class="images">
+            <img class="threeLines" id="image" src="./Assets/threeLines.png" height="50px" width="50px" type="button">
+            <img class="analysisIcon" id="image" src="./Assets/analysisIcon.png" height="50px" width="50px" type="button">
+            <img class="gameIcon" id="image" src="./Assets/gameIcon.png" height="50px" width="50px" type="button">
+        </div>
+        <div class="playButton">
+            <a href="./Q1.html" onclick="startTimer()">
+                <button type="button" class="playBtn">Play</button>
+            </a>
+        </div>
+
+        <script>
+            function startTimer() {
+                const quizDuration = 3 * 60; // 3 minutes in seconds
+                const endTime = Date.now() + quizDuration * 1000; 
+                localStorage.setItem('quizEndTime', endTime);
+            }
+        </script>
+    </body>
+</html>

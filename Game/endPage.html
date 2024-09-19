@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleEndPage.css">
+    <style>body{
+      background-color: #D5BDA9;
+      text-align: center;
+      padding-top: 17%;
+      font-size: 150%;
+  }</style>
+</head>
+<body>
+    <!-- <h2>Score: 2/5</h2> -->
+    <h1>CONGRATULATIONS!</h1>
+    <h1>Game Completed</h1>
+    <!-- <div class="main-container">
+        <button class="fire-btn">Click Me!</button>
+    </div> -->
+    <script>
+        // const firebtn = document.querySelector(".fire-btn");
+        // firebtn.addEventListener('click',() =>{
+        //     const end = Date.now() + 15 * 1000;
+
+      const colors = ["#bb0000", "#ffffff"];
+      function startConfetti(){
+      (function frame() {
+        confetti({
+          particleCount: 2,
+          angle: 40,
+          spread: 60,
+          origin: { x: 0 },
+          colors: colors,
+        });
+
+        confetti({
+          particleCount: 2,
+          angle: 120,
+          spread: 55,
+          origin: { x: 1 },
+          colors: colors,
+        });
+
+          // if (Date.now() < end) {
+            requestAnimationFrame(frame);
+          // }
+        })();
+      }
+      window.onload = startConfetti;
+        // })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+    
+</body>
+</html>

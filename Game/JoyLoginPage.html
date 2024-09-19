@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styleJoyLoginPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="overall">
+        <form action="#">
+            <h1>Login</h1>
+            <div class="input-box">
+                <label>Username:</label>
+                <input type="text" placeholder="Username">
+                <br>
+            </div>
+            <div class="input-box">
+                <label>Password:</label>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Password">
+                    <span id="togglePassword" class="eye"><i class="far fa-eye"></i></span>
+                </div>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <button type="button">Forgot Password?</button>
+            </div>
+            <div class="submit-button">
+                <button  type="button" onclick="window.location.href='./playButton.html';" class="button">Login</button>
+            </div>
+            
+        </form>
+    </div>
+
+    <script>
+        const togglePassword = document.getElementById('togglePassword');
+        const password = document.getElementById('password');
+        const eyeIcon = togglePassword.querySelector('i');
+
+        togglePassword.addEventListener('click', function () {
+            const type = password.type === 'password' ? 'text' : 'password';
+            password.type = type;
+            eyeIcon.classList.toggle('fa-eye-slash');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: jost,sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-color: skyblue;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url("../Final_F.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100% 25%;
+}
+
+
+.overall {
+    width: 400px;
+    height: 550px;
+    padding: 40px;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid grey;
+    border-radius: 30px;
+    margin-right: 100px;
+}
+
+.overall h1 {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+
+.input-box {
+    margin-top: 50px;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+.input-box label{
+    font-size: 14px;
+    font-weight: bold;
+}
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    background: #F4F6FC;
+    outline: none;
+    border: 0.2px solid;
+    border-radius: 5px;
+    font-size: 12px;
+
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    
+    align-items: center;
+    margin-right: 5px;
+    margin-top: 40px;
+}
+
+.remember-forgot label input {
+    margin: 3px;
+    font-size: large;
+}
+
+.remember-forgot button {
+    border-radius: 5px;
+    width: 160px;
+    border: 0.5px solid black;
+    height: 30px;
+    background: #F4F6FC;
+}
+
+.remember-forgot button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}
+
+.submit-button {
+    display: flex;
+    justify-content: center;
+    margin: 40px 0 25px;
+    
+}
+
+.submit-button button {
+    width: 150px;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: jost,sans-serif;
+    color: hsl(0, 0%, 0%);
+    border-radius: 5px;
+    border: solid black;
+    height: 50px;
+    background-color: hsla(14, 78%, 54%, 0.75);
+    
+}
+
+.submit-button button:hover {
+    background-color: hsla(210, 50%, 60%, 0.85);
+    cursor: pointer;
+}
+
+
+img {
+    float: left;
+}
+.password-container {
+    position: relative;
+}
+
+.password-container input[type="password"],.password-container input[type="text"] {
+    width: 100%;
+    padding-right: 40px; 
+    box-sizing: border-box;
+}
+
+.password-container .eye {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    
+}
+
+.password-container .eye i {
+    font-size: 16px;
+}
+
+
+.input-box label, .remember-forgot label {
+    cursor: text;
+}
+
+
+.remember-forgot label input {
+    cursor: pointer; 
+}
